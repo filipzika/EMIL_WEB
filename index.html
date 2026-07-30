@@ -60,9 +60,9 @@
   <div class="wrap hero-grid">
 
     <figure class="hero-visual reveal">
-      <img src="assets/img/emil-deska-2-pcb.png"
+      <img src="assets/img/emil-deska-2-hero.png"
            alt="Neosazená deska plošných spojů Emil 2.0 (2/3) s potiskem schématu a pájecími ploškami"
-           width="1620" height="1079" fetchpriority="high">
+           width="2160" height="1439" fetchpriority="high">
     </figure>
 
     <div class="hero-copy reveal">
@@ -164,7 +164,7 @@
 
         <!-- ---- Deska 1/3 ---- -->
         <div class="board-stage" id="panel-b1" role="tabpanel" aria-labelledby="tab-b1">
-          <img src="assets/img/emil-deska-1.png" alt="Deska Emil 1/3 — DC konektor, rezistory, dvě LED diody, tlačítko, potenciometr a dva header konektory" width="1620" height="1081">
+          <img src="assets/img/emil-deska-1.png" alt="Deska Emil 1/3 — DC konektor, rezistory, dvě LED diody, tlačítko, potenciometr a dva header konektory" width="2160" height="1451">
           <div class="hotspots">
             <button class="hs" style="--x:7.5%;--y:48.4%"  data-part="b1-dc1"><i></i><span class="hs-tag">DC1</span></button>
             <button class="hs" style="--x:66.9%;--y:19.3%" data-part="b1-r1"><i></i><span class="hs-tag">R1</span></button>
@@ -179,7 +179,7 @@
 
         <!-- ---- Deska 2/3 ---- -->
         <div class="board-stage" id="panel-b2" role="tabpanel" aria-labelledby="tab-b2" hidden>
-          <img src="assets/img/emil-deska-2.png" alt="Deska Emil 2/3 — DC konektor, přepínač, teplotní rezistor, fotorezistor, tlačítko, kondenzátor, rezistor a tři LED diody" width="1620" height="1077" loading="lazy">
+          <img src="assets/img/emil-deska-2.png" alt="Deska Emil 2/3 — DC konektor, přepínač, teplotní rezistor, fotorezistor, tlačítko, kondenzátor, rezistor a tři LED diody" width="2160" height="1439" loading="lazy">
           <div class="hotspots">
             <button class="hs" style="--x:7.5%;--y:48.5%"  data-part="b2-dc1"><i></i><span class="hs-tag">DC1</span></button>
             <button class="hs" style="--x:39.5%;--y:32.7%" data-part="b2-sw1"><i></i><span class="hs-tag">SW1</span></button>
@@ -196,7 +196,7 @@
 
         <!-- ---- Deska 3/3 ---- -->
         <div class="board-stage" id="panel-b3" role="tabpanel" aria-labelledby="tab-b3" hidden>
-          <img src="assets/img/emil-deska-3.png" alt="Deska Emil 3/3 — DC konektor, rezistory, fotorezistor, testovací body TP1 až TP4, tři LED diody, cívka a tlačítko" width="1620" height="1084" loading="lazy">
+          <img src="assets/img/emil-deska-3.png" alt="Deska Emil 3/3 — DC konektor, rezistory, fotorezistor, testovací body TP1 až TP4, tři LED diody, cívka a tlačítko" width="2160" height="1439" loading="lazy">
           <div class="hotspots">
             <button class="hs" style="--x:7.5%;--y:47.8%"  data-part="b3-dc1"><i></i><span class="hs-tag">DC1</span></button>
             <button class="hs" style="--x:47.0%;--y:22.0%" data-part="b3-r1"><i></i><span class="hs-tag">R1</span></button>
@@ -227,7 +227,6 @@
           <div><dt>Uzel</dt><dd id="partNode">—</dd></div>
           <div><dt>Typ</dt><dd id="partType">—</dd></div>
         </dl>
-        <p class="panel-hint">Tip: procházejte body klávesami <kbd>←</kbd> <kbd>→</kbd>.</p>
       </aside>
 
     </div>
@@ -367,7 +366,7 @@
   <div class="wrap split split--rev">
 
     <figure class="split-media split-media--plain reveal">
-      <img src="assets/img/emil-deska-3.png" alt="Osazená deska Emil 3/3 s rezistory, fotorezistorem, cívkou, tlačítkem a třemi LED diodami" width="1620" height="1084" loading="lazy">
+      <img src="assets/img/emil-deska-3.png" alt="Osazená deska Emil 3/3 s rezistory, fotorezistorem, cívkou, tlačítkem a třemi LED diodami" width="2160" height="1439" loading="lazy">
       <figcaption>Deska 3/3 po osazení — cívka L1 a měřicí body TP1 až TP4.</figcaption>
     </figure>
 
@@ -448,8 +447,45 @@
       Napište nám počet sad a ročník, pro který desky sháníte. Ozveme se
       s cenovou nabídkou a termínem dodání.
     </p>
+
+    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/filip.zika@forestbit.cz" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Nová poptávka z webu Emil 2.0">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <label for="cfName">Jméno a příjmení *</label>
+        <input type="text" id="cfName" name="Jméno" required autocomplete="name">
+      </div>
+
+      <div class="form-row form-row--split">
+        <div>
+          <label for="cfSchool">Škola / organizace</label>
+          <input type="text" id="cfSchool" name="Škola" autocomplete="organization">
+        </div>
+        <div>
+          <label for="cfQty">Počet sad</label>
+          <input type="number" id="cfQty" name="Počet sad" min="1" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="cfEmail">E-mail *</label>
+        <input type="email" id="cfEmail" name="E-mail" required autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="cfMessage">Zpráva *</label>
+        <textarea id="cfMessage" name="Zpráva" rows="4" required></textarea>
+      </div>
+
+      <button class="btn btn--inv" type="submit">Odeslat poptávku</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <p class="cta-alt">Nebo napište přímo:</p>
     <div class="cta-actions">
-      <a class="btn btn--inv" href="mailto:info@forestbit.cz?subject=Poptávka%20Emil%202.0">info@forestbit.cz</a>
+      <a class="btn btn--outline-inv" href="mailto:filip.zika@forestbit.cz?subject=Poptávka%20Emil%202.0">filip.zika@forestbit.cz</a>
       <a class="btn btn--outline-inv" href="https://www.instagram.com/emil_2_0_/" target="_blank" rel="noopener">@emil_2_0_</a>
     </div>
     <p class="cta-claim">Zapoj. Vyzkoušej. Pochop.</p>
@@ -477,7 +513,7 @@
 
     <nav class="footer-nav" aria-label="Kontakty">
       <h3>Kontakt</h3>
-      <a href="mailto:info@forestbit.cz">info@forestbit.cz</a>
+      <a href="mailto:filip.zika@forestbit.cz">filip.zika@forestbit.cz</a>
       <a href="https://forestbit.cz" target="_blank" rel="noopener">forestbit.cz</a>
       <a href="https://www.instagram.com/emil_2_0_/" target="_blank" rel="noopener">Instagram @emil_2_0_</a>
     </nav>

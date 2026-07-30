@@ -37,6 +37,46 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  /* ---------- kontaktní formulář ---------- */
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+
+  if (form && status) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (form.querySelector('[name="_honey"]').value) return;
+
+      var btn = form.querySelector('button[type="submit"]');
+      var original = btn.textContent;
+
+      btn.disabled = true;
+      btn.textContent = 'Odesílám…';
+      status.textContent = '';
+      status.className = 'form-status';
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Odeslání se nezdařilo');
+          form.reset();
+          status.textContent = 'Děkujeme, poptávku jsme přijali. Ozveme se co nejdřív.';
+          status.classList.add('is-success');
+        })
+        .catch(function () {
+          status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na filip.zika@forestbit.cz.';
+          status.classList.add('is-error');
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = original;
+        });
+    });
+  }
+
   /* ---------- reveal při scrollu ---------- */
   var revealables = document.querySelectorAll('.reveal');
 

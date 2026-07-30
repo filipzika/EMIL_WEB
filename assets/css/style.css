@@ -303,11 +303,6 @@ table{border-collapse:collapse;width:100%}
   background:var(--paper);padding:9px 12px}
 .panel-meta dt{font-size:.76rem;color:var(--ink-45);font-family:var(--font-mono);letter-spacing:.08em}
 .panel-meta dd{margin:0;font-size:.82rem;font-weight:500}
-.panel-hint{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-soft);
-  font-size:.76rem !important;color:var(--ink-45) !important}
-kbd{font-family:var(--font-mono);font-size:.72rem;border:1px solid var(--line);
-  border-bottom-width:2px;border-radius:4px;padding:1px 5px;background:var(--paper)}
-
 /* ============================================================
    PRINCIP / KROKY
    ============================================================ */
@@ -401,7 +396,46 @@ kbd{font-family:var(--font-mono);font-size:.72rem;border:1px solid var(--line);
 .cta{background:var(--ink);color:#fff;overflow:hidden;text-align:center}
 .cta-inner{position:relative;z-index:1;max-width:720px}
 .cta-lead{margin:22px auto 0;color:rgba(255,255,255,.66);max-width:48ch}
-.cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+
+.contact-form{
+  text-align:left;max-width:520px;margin:40px auto 0;
+  display:grid;gap:18px;
+}
+.form-row{display:grid;gap:7px}
+.form-row--split{grid-template-columns:1fr 1fr;gap:18px}
+.form-row--split > div{display:grid;gap:7px}
+.contact-form label{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.09em;
+  text-transform:uppercase;color:rgba(255,255,255,.55);
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;padding:12px 14px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);
+  color:#fff;font:inherit;font-size:.95rem;
+  transition:border-color .2s var(--ease),background .2s var(--ease);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{color:rgba(255,255,255,.35)}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.1);
+  outline:none;
+}
+.contact-form textarea{resize:vertical;min-height:96px}
+.hp-field{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px}
+.contact-form button{justify-self:start}
+.contact-form button[disabled]{opacity:.6;cursor:default;transform:none}
+
+.form-status{font-size:.85rem;min-height:1.2em;margin:0;color:rgba(255,255,255,.7)}
+.form-status.is-success{color:#8fe3a3}
+.form-status.is-error{color:#ff9a9a}
+
+.cta-alt{
+  margin-top:38px;font-size:.8rem;letter-spacing:.04em;
+  color:rgba(255,255,255,.45);
+}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:14px}
 .cta-claim{
   margin-top:46px;padding-top:28px;border-top:1px solid rgba(255,255,255,.15);
   font-family:var(--font-mono);font-size:.85rem;letter-spacing:.22em;
@@ -481,6 +515,8 @@ kbd{font-family:var(--font-mono);font-size:.72rem;border:1px solid var(--line);
   .spectable td{display:block;padding-top:0;padding-bottom:16px}
   .spectable tr{display:block}
   .cta-actions .btn{flex:1 1 100%;justify-content:center}
+  .form-row--split{grid-template-columns:1fr}
+  .contact-form button{justify-self:stretch;justify-content:center}
 }
 
 @media (prefers-reduced-motion:reduce){

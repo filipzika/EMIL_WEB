@@ -9,10 +9,11 @@ prezentace `Emil.pdf`, obrázky desek z dodaných renderů.
 ```
 index.html              celá stránka (9 sekcí)
 assets/css/style.css    styly — monochromatický technicistní vizuál
-assets/js/main.js       navigace, reveal animace, přepínání desek, hotspoty
+assets/js/main.js       navigace, reveal animace, přepínání desek, hotspoty, kontaktní formulář
 assets/img/             emil-logo.svg
-                        emil-deska-1.png, emil-deska-2.png, emil-deska-3.png
-                        emil-deska-2-pcb.png (holá deska)
+                        emil-deska-1.png, emil-deska-2.png, emil-deska-3.png (osazené desky pro sekci Anatomie desek)
+                        emil-deska-2-hero.png (neosazená deska 2/3 pro hero)
+                        emil-deska-2-pcb.png (nepoužito, ponecháno pro pozdější použití)
                         emil-box.jpg, emil-etiketa.jpg
 ```
 
@@ -39,7 +40,7 @@ je lepší stránku servírovat přes HTTP než otevírat `index.html` z disku.
 5. **Pro školy** — šest karet s argumenty pro nákup
 6. **Specifikace** — tabulka parametrů + holá deska 2/3
 7. **FAQ** — rozbalovací dotazy (`<details>`)
-8. **Kontakt / CTA** — inverzní blok s e-mailem a Instagramem
+8. **Kontakt / CTA** — poptávkový formulář + e-mail a Instagram jako alternativa
 9. **Patička**
 
 ## Interaktivní desky
@@ -52,6 +53,19 @@ Při výměně obrázku desky je potřeba přeměřit souřadnice bodů.
 Ovládání: myš (hover i klik), klávesnice — `←` / `→` mezi body i mezi
 záložkami desek.
 
+## Kontaktní formulář
+
+Formulář v sekci **Kontakt** odesílá data přes [FormSubmit](https://formsubmit.co)
+(`https://formsubmit.co/ajax/filip.zika@forestbit.cz`) — bezplatná služba,
+která POST z formuláře přepošle e-mailem, takže web nepotřebuje žádný
+vlastní backend. Odeslání běží přes `fetch` v `main.js` (bez opuštění
+stránky), obsahuje honeypot pole proti spamu a `_captcha=false`.
+
+**Před prvním použitím:** FormSubmit musí příjemce jednou potvrdit —
+po prvním odeslání formuláře přijde na `filip.zika@forestbit.cz`
+aktivační e-mail s odkazem „Activate form". Bez potvrzení se další
+zprávy nedoručí.
+
 ## Design
 
 - Barvy: `#1d1d1b` (ink), bílá, `#f2f2f0` (wash) — monochromaticky dle manuálu
@@ -61,7 +75,7 @@ záložkami desek.
 
 ## Co je potřeba doplnit před ostrým nasazením
 
-- reálné kontaktní údaje a odkaz na e-shop (nyní `info@forestbit.cz`, `forestbit.cz`)
+- potvrdit FormSubmit aktivační e-mail (viz výše), jinak poptávky nedojdou
 - ověřit popisy součástek v sekci **Anatomie desek** — jsou odvozené
   ze schémat na deskách, ne z dokumentace
 - vlastní hosting fontů, pokud je potřeba fungovat bez externích požadavků
