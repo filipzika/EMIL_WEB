@@ -4,8 +4,8 @@
     {
       "name": "emil-web",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4321"],
-      "port": 4321
+      "runtimeArgs": [".claude/serve.py"],
+      "autoPort": true
     }
   ]
 }
