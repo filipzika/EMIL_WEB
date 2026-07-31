@@ -348,7 +348,7 @@ table{border-collapse:collapse;width:100%}
 }
 .parts em{font-style:normal;color:var(--ink-45);font-size:.86em}
 .parts-subhead{
-  margin-top:32px;font-family:var(--font-mono);font-size:.72rem;
+  margin-top:52px;font-family:var(--font-mono);font-size:.72rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink-45);
 }
 .note{
