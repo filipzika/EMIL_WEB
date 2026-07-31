@@ -56,13 +56,13 @@ záložkami desek.
 ## Kontaktní formulář
 
 Formulář v sekci **Kontakt** odesílá data přes [FormSubmit](https://formsubmit.co)
-(`https://formsubmit.co/ajax/filip.zika@forestbit.cz`) — bezplatná služba,
+(`https://formsubmit.co/ajax/emil@forestbit.cz`) — bezplatná služba,
 která POST z formuláře přepošle e-mailem, takže web nepotřebuje žádný
 vlastní backend. Odeslání běží přes `fetch` v `main.js` (bez opuštění
 stránky), obsahuje honeypot pole proti spamu a `_captcha=false`.
 
 **Před prvním použitím:** FormSubmit musí příjemce jednou potvrdit —
-po prvním odeslání formuláře přijde na `filip.zika@forestbit.cz`
+po prvním odeslání formuláře přijde na `emil@forestbit.cz`
 aktivační e-mail s odkazem „Activate form". Bez potvrzení se další
 zprávy nedoručí.
 

@@ -347,6 +347,10 @@ table{border-collapse:collapse;width:100%}
   color:var(--ink-45);min-width:52px;flex:none;
 }
 .parts em{font-style:normal;color:var(--ink-45);font-size:.86em}
+.parts-subhead{
+  margin-top:32px;font-family:var(--font-mono);font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-45);
+}
 .note{
   margin-top:26px;padding:16px 20px;border-left:2px solid var(--ink);
   background:var(--paper);font-size:.9rem;color:var(--ink-70);

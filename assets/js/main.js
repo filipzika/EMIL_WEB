@@ -67,7 +67,7 @@
           status.classList.add('is-success');
         })
         .catch(function () {
-          status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na filip.zika@forestbit.cz.';
+          status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na emil@forestbit.cz.';
           status.classList.add('is-error');
         })
         .finally(function () {
