@@ -45,6 +45,11 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       if (form.querySelector('[name="_honey"]').value) return;
 
       var btn = form.querySelector('button[type="submit"]');
