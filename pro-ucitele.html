@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro učitele | Emil 2.0 — ForestBit Electronics</title>
+<meta name="description" content="Materiály a podpora pro školy, které už mají Emila — pracovní listy ke stažení a formulář pro zpětnou vazbu.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://emil.forestbit.cz/pro-ucitele.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#hlavni">Přeskočit na obsah</a>
+<span id="top" class="visually-hidden"></span>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+
+    <a class="brand" href="index.html" aria-label="Emil 2.0 — úvod">
+      <img src="assets/img/emil-logo.svg" alt="Emil 2.0" width="1969" height="475">
+    </a>
+
+    <nav class="site-nav" id="nav" aria-label="Hlavní navigace">
+      <a href="index.html#desky">Desky</a>
+      <a href="index.html#princip">Jak to funguje</a>
+      <a href="index.html#baleni">Obsah balení</a>
+      <a href="index.html#skoly">Pro školy</a>
+      <a href="index.html#parametry">Parametry</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--ghost btn--sm" href="pro-ucitele.html">Pro učitele</a>
+      <a class="btn btn--solid btn--sm" href="index.html#kontakt">
+        <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M4 6h16l-1.6 9.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.7L4.4 4.6A1 1 0 0 0 3.4 3.8H2"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+        Objednat
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Otevřít menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="hlavni">
+
+<!-- ============ ÚVOD ============ -->
+<section class="section">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Pro učitele</p>
+    <h1>Materiály pro školy, které už Emila mají</h1>
+    <p class="sec-lead">
+      Tahle stránka je pro učitele, kteří sadu Emil 2.0 už používají ve
+      výuce. Najdete tu pracovní listy ke stažení ke všem třem deskám
+      a formulář, kterým nám můžete poslat zpětnou vazbu — co fungovalo,
+      co byste zlepšili, nebo na co jste narazili.
+    </p>
+  </div>
+</section>
+
+<!-- ============ PRACOVNÍ LISTY ============ -->
+<section class="section section--wash" id="pracovni-listy">
+  <div class="wrap wrap--narrow">
+    <p class="parts-subhead">Pracovní listy ke stažení</p>
+    <ul class="worksheet-list">
+      <li>
+        <span class="parts-ref">1/3</span>
+        <span>Pracovní list — Základní obvod</span>
+        <a href="assets/docs/pracovni-list-emil-1.docx" download>Stáhnout (.docx)</a>
+      </li>
+      <li>
+        <span class="parts-ref">2/3</span>
+        <span>Pracovní list — Světlo, teplo a čas</span>
+        <a href="assets/docs/pracovni-list-emil-2.docx" download>Stáhnout (.docx)</a>
+      </li>
+      <li>
+        <span class="parts-ref">3/3</span>
+        <span>Pracovní list — Měření a cívka</span>
+        <a href="assets/docs/pracovni-list-emil-3.docx" download>Stáhnout (.docx)</a>
+      </li>
+    </ul>
+    <p class="note">
+      Listy jsou ve formátu .docx, takže si je můžete volně upravit podle
+      úrovně třídy nebo délky hodiny.
+    </p>
+  </div>
+</section>
+
+<!-- ============ ZPĚTNÁ VAZBA ============ -->
+<section class="section cta" id="zpetna-vazba">
+  <div class="blueprint blueprint--dark" aria-hidden="true"></div>
+  <div class="wrap cta-inner reveal">
+    <p class="eyebrow eyebrow--inv">Zpětná vazba</p>
+    <h2>Jak se Emil ve výuce osvědčil?</h2>
+    <p class="cta-lead">
+      Podělte se s námi o zkušenosti ze třídy — co fungovalo, co byste
+      zlepšili, nebo na co jste narazili. Čteme všechno a pracovní listy
+      podle toho vylepšujeme.
+    </p>
+
+    <form class="contact-form" id="contactForm" data-success-message="Děkujeme za zpětnou vazbu, moc si toho vážíme." action="https://formsubmit.co/ajax/emil@forestbit.cz" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Zpětná vazba k Emilovi z webu">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="form-row">
+        <label for="cfName">Jméno a příjmení *</label>
+        <input type="text" id="cfName" name="Jméno" required autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <label for="cfSchool">Škola *</label>
+        <input type="text" id="cfSchool" name="Škola" required autocomplete="organization">
+      </div>
+
+      <div class="form-row">
+        <label for="cfEmail">E-mail *</label>
+        <input type="email" id="cfEmail" name="E-mail" required autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="cfMessage">Zpětná vazba *</label>
+        <textarea id="cfMessage" name="Zpětná vazba" rows="5" required></textarea>
+      </div>
+
+      <button class="btn btn--inv" type="submit">Odeslat zpětnou vazbu</button>
+      <p class="form-consent">
+        Odesláním souhlasíte se zpracováním osobních údajů dle
+        <a href="ochrana-osobnich-udaju.html">Zásad ochrany osobních údajů</a>.
+      </p>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+
+    <div class="footer-brand">
+      <img class="footer-logo" src="assets/img/emil-logo.svg" alt="Emil 2.0" width="1969" height="475">
+      <p>Elektrotechnická stavebnice pro školy.<br>Vyrábí ForestBit Electronics.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Patička">
+      <h3>Produkt</h3>
+      <a href="index.html#desky">Anatomie desek</a>
+      <a href="index.html#princip">Jak to funguje</a>
+      <a href="index.html#baleni">Obsah balení</a>
+      <a href="index.html#parametry">Parametry</a>
+      <a href="pro-ucitele.html">Pro učitele</a>
+    </nav>
+
+    <nav class="footer-nav" aria-label="Kontakty">
+      <h3>Kontakt</h3>
+      <a href="mailto:emil@forestbit.cz">emil@forestbit.cz</a>
+      <a href="https://forestbit.cz" target="_blank" rel="noopener">forestbit.cz</a>
+      <a href="https://www.instagram.com/emil_2_0_/" target="_blank" rel="noopener">Instagram @emil_2_0_</a>
+    </nav>
+
+    <div class="footer-legal">
+      <h3>Provozovatel</h3>
+      <p>
+        ForestBit Electronics s.r.o.<br>
+        Preslova 72/25, 150 00 Praha 5<br>
+        IČO: 14303388 · DIČ: CZ14303388<br>
+        Zapsaná u Městského soudu v Praze, sp. zn. C 363652
+      </p>
+      <a href="ochrana-osobnich-udaju.html">Zásady ochrany osobních údajů</a>
+      <a href="assets/docs/eu-prohlaseni-o-shode-adapter.pdf" target="_blank" rel="noopener">EU Prohlášení o shodě (adaptér)</a>
+      <a href="assets/docs/rohs-certifikat-deska-jlcpcb.pdf" target="_blank" rel="noopener">RoHS certifikát (deska)</a>
+    </div>
+
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>© <span id="year">2026</span> ForestBit Electronics s.r.o.</p>
+    <p class="footer-mono">Emil 2.0</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

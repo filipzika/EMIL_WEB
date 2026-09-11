@@ -68,7 +68,7 @@
         .then(function (res) {
           if (!res.ok) throw new Error('Odeslání se nezdařilo');
           form.reset();
-          status.textContent = 'Děkujeme, poptávku jsme přijali. Ozveme se co nejdřív.';
+          status.textContent = form.dataset.successMessage || 'Děkujeme, poptávku jsme přijali. Ozveme se co nejdřív.';
           status.classList.add('is-success');
         })
         .catch(function () {

@@ -356,6 +356,20 @@ table{border-collapse:collapse;width:100%}
   background:var(--paper);font-size:.9rem;color:var(--ink-70);
 }
 
+.worksheet-list{margin-top:16px;border-top:1px solid var(--line)}
+.worksheet-list li{
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:16px 0;border-bottom:1px solid var(--line);
+  font-size:.97rem;
+}
+.worksheet-list li > span:nth-child(2){flex:1 1 auto}
+.worksheet-list a{
+  flex:none;font-family:var(--font-mono);font-size:.82rem;
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  transition:color .2s var(--ease);
+}
+.worksheet-list a:hover{color:var(--ink-70)}
+
 .split-media{margin:0}
 .split-media img{width:100%;border-radius:var(--r);border:1px solid var(--line)}
 .split-media--plain img{border:0;border-radius:0;filter:drop-shadow(0 18px 34px rgba(0,0,0,.12))}
